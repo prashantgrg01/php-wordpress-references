@@ -23,3 +23,6 @@
 
 // Get User's Biological Info
 <?php echo get_the_author_meta("description"); ?>
+
+// Get Field's data set using Advanced Custom Fields plugin
+<?php the_field('custom_field_name'); ?>
