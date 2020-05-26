@@ -9,14 +9,20 @@
   // You code here
 <?php endwhile; endif; ?>
 
+// Retrieve the ID of the current item inside the WordPress Loop
+<?php echo get_the_ID(); ?>
+
+// Retrieve the ID of the current item outside the WordPress Loop
+<?php echo get_queried_object_id(); ?>
+
 // Get Current User
 <?php $user = wp_get_current_user(); ?>
 
-// Display Author's Username
-<?php the_author(); ?>
+// Get Author's Username
+<?php echo get_the_author(); ?>
 
-// Display Post's Published Date
-<?php the_time("F j, Y"); ?>
+// Get Post's Published Date
+<?php echo get_the_time("F j, Y"); ?>
 
 // Get User's Profile Image
 <?php echo get_avatar_url($user->ID); ?>
@@ -25,4 +31,4 @@
 <?php echo get_the_author_meta("description"); ?>
 
 // Get Field's data set using Advanced Custom Fields plugin
-<?php the_field('custom_field_name'); ?>
+<?php echo get_field('<custom_field_name>'); ?>
