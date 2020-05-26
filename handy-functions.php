@@ -15,6 +15,20 @@
 // Retrieve the ID of the current item outside the WordPress Loop
 <?php echo get_queried_object_id(); ?>
 
+// Custom WP Query
+<?php
+  // Setup WP Query args
+  $args = array(
+    '<arg1>' => <arg1_value>,
+    '<arg2>' => <arg2_value>,
+    ...
+  );
+  // Define our WP Query
+  $query = new WP_Query($args);
+  // Start our WP Query loop
+  while ($query -> have_posts()): $query -> the_post();
+?>
+
 // Get Current User
 <?php $user = wp_get_current_user(); ?>
 
